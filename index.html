@@ -49,9 +49,16 @@
     
         .social-links img {
             height: 24px;
+        }
+
+        .linkedin-logo {
+            width: 89px;
+        }
+
+        .github-logo, .email-logo {
             width: 24px;
         }
-    
+
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -78,46 +85,48 @@
 <body>
     <header>
         <h1>Luka Brown</h1>
-        <p>Software Developer & Gamer</p>
+        <p>Software Engineer</p>
     </header>
     <main>
         <section class="social-links">
             <a href="https://linkedin.com/in/lukabrown" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" alt="LinkedIn" />
+                <img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" alt="LinkedIn" />
             </a>
             <a href="https://github.com/lukabrown" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub" />
+                <img class="github-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub" />
+            </a>
+            <a href="mailto:lukab.dev@proton.me">
+                <img class="email-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Email_Shiny_Icon.svg" alt="Email" />
             </a>
         </section>
         <section>
             <h2>About Me</h2>
             <p>Hi, I'm Luka Brown, a software developer with a strong background in Computer Science and Applied Mathematics. I am proficient in C++, Java, and Python, and I have experience in parallel code development, GPU programming, and algorithm design and analysis. I am passionate about gaming and developing code.</p>
-            <p>You can find my resume and cover letter <a href="#resume">here</a>.</p>
+            <p>You can find my resume <a href="#resume">here</a>.</p>
         </section>
         <section>
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project">
                     <h3 class="project-title">Secure Voting System</h3>
-                    <p>Implemented a secure decentralized voting simulator using DAGs, TangleCV, and blockchain technology.</p>
+                    <p>Implemented a secure decentralized voting simulator using DAGs, TangleCV, and blockchain technology in Python.</p>
                     <a class="project-link" href="https://github.com/lukabrown/Secure-Voting-System" target="_blank">View on GitHub</a>
                 </div>
                 <div class="project">
-                <h3 class="project-title">FCFS CPU Simulator</h3>
-                <p>A discrete time event simulator that generates random data for about 10,000 processes using First Come First Serve scheduling.</p>
+                <h3 class="project-title">CPU Scheduling Simulation</h3>
+                <p>A discrete time event simulator that processes random data for about 10,000 processes using First Come First Serve scheduling.</p>
                 <a class="project-link" href="https://github.com/lukabrown/CPU-Scheduling" target="_blank">View on GitHub</a>
                 </div>
                 <div class="project">
                 <h3 class="project-title">The Deep Below</h3>
-                <p>A C++-based cross-platform mining game developed in my spare time.</p>
-                <a class="project-link" href="#" target="_blank">Coming Soon</a>
+                <p>A C++-based cross-platform mining game developed in my spare time. Go fight enemy miners and stop at the shops to gear up!</p>
+                <a class="project-link" href="https://github.com/lukabrown/The-Deep-Below" target="_blank">View on GitHub</a>
                 </div>
                 </div>
                 </section>
                 <section id="resume">
-                <h2>Resume & Cover Letter</h2>
-                <p><a href="Luka_Brown_Resume.pdf" download>Download Resume (PDF)</a></p>
-                <p><a href="Luka_Brown_Cover_Letter.pdf" download>Download Cover Letter (PDF)</a></p>
+                <h2>Resume</h2>
+                <p><a href="lbresume.pdf" download>Download Resume (PDF)</a></p>
                 </section>
                 </main>
                 
