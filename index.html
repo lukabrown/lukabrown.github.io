@@ -48,21 +48,31 @@
         }
     
         .social-links img {
-            height: 24px;
+            height: 48px;
         }
 
         .linkedin-logo {
-            width: 89px;
+            width: 177px;
         }
 
-        .github-logo, .email-logo {
-            width: 24px;
+        .github-logo, .email-logo, .pdf-logo {
+            width: 48px;
+        }
+
+        .center {
+            text-align: center;
         }
 
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1rem;
+            justify-content: center;
+        }
+
+        .projects-container {
+            max-width: 960px;
+            margin: 0 auto;
         }
     
         .project {
@@ -85,50 +95,58 @@
 <body>
     <header>
         <h1>Luka Brown</h1>
-        <p>Software Engineer</p>
+        <p>21. Software Engineer. Texas State '23 Graduate.</p>
     </header>
     <main>
+        <section class="center">
+        <h2>Contact Me</h2>
+        <p> </p>
+        </section>
         <section class="social-links">
+            <a href="mailto:lukab.dev@proton.me">
+                <img class="email-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Email_Shiny_Icon.svg" alt="Email Me" />
+            </a>
             <a href="https://linkedin.com/in/lukabrown" target="_blank">
                 <img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" alt="LinkedIn" />
             </a>
             <a href="https://github.com/lukabrown" target="_blank">
                 <img class="github-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub" />
             </a>
-            <a href="mailto:lukab.dev@proton.me">
-                <img class="email-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Email_Shiny_Icon.svg" alt="Email" />
-            </a>
+            <section id="resume">
+            <a href="lbresume.pdf" download>
+                <img class="pdf-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png" alt="Download Resume" />
+            </a></section>
         </section>
-        <section>
+        <section class="center">
+            <p>You can find my resume <a href="lbresume.pdf" download>here</a>.</p>
+            <p>Please direct all professional inquiries to <a href="mailto:lukab.dev@proton.me">lukab.dev@proton.me</a>.</p>
+        </section>
+        <section class="center">
             <h2>About Me</h2>
             <p>Hi, I'm Luka Brown, a software developer with a strong background in Computer Science and Applied Mathematics. I am proficient in C++, Java, and Python, and I have experience in parallel code development, GPU programming, and algorithm design and analysis. I am passionate about gaming and developing code.</p>
-            <p>You can find my resume <a href="#resume">here</a>.</p>
+            
         </section>
-        <section>
+        <section class="center">
             <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3 class="project-title">Secure Voting System</h3>
-                    <p>Implemented a secure decentralized voting simulator using DAGs, TangleCV, and blockchain technology in Python.</p>
-                    <a class="project-link" href="https://github.com/lukabrown/Secure-Voting-System" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-                <h3 class="project-title">CPU Scheduling Simulation</h3>
-                <p>A discrete time event simulator that processes random data for about 10,000 processes using First Come First Serve scheduling.</p>
-                <a class="project-link" href="https://github.com/lukabrown/CPU-Scheduling" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-                <h3 class="project-title">The Deep Below</h3>
-                <p>A C++-based cross-platform mining game developed in my spare time. Go fight enemy miners and stop at the shops to gear up!</p>
-                <a class="project-link" href="https://github.com/lukabrown/The-Deep-Below" target="_blank">View on GitHub</a>
-                </div>
-                </div>
-                </section>
-                <section id="resume">
-                <h2>Resume</h2>
-                <p><a href="lbresume.pdf" download>Download Resume (PDF)</a></p>
-                </section>
-                </main>
-                
-                </body>
-                </html>
+            <div class="projects-container">
+                <div class="projects">
+                    <div class="project">
+                        <h3 class="project-title">Secure Voting System</h3>
+                        <p>Implemented a secure decentralized voting simulator using DAGs, TangleCV, and blockchain technology in Python.</p>
+                        <a class="project-link" href="https://github.com/lukabrown/Secure-Voting-System" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project">
+                        <h3 class="project-title">CPU Scheduling Simulation</h3>
+                        <p>A discrete time event simulator that processes random data for about 10,000 processes using First Come First Serve scheduling.</p>
+                        <a class="project-link" href="https://github.com/lukabrown/CPU-Scheduling" target="_blank">View on GitHub</a>
+                    </div>
+                    <div class="project">
+                        <h3 class="project-title">The Deep Below</h3>
+                        <p>A C++-based cross-platform mining game developed in my spare time. Go fight enemy miners and stop at the shops to gear up!</p>
+                        <a class="project-link" href="https://github.com/lukabrown/The-Deep-Below" target="_blank">View on GitHub</a>
+                    </div>
+                    </div>
+                    </div>
+                    </section class="center">
+                    </body>
+                    </html>
