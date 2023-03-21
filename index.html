@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luka Brown's Portfolio</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #dbcece;
             margin: 0;
             padding: 0;
         }
         header {
+            
             background-color: #333;
             color: white;
             text-align: center;
@@ -23,7 +25,7 @@
         }
     
         a {
-            color: #333;
+            color: #333333;
             text-decoration: none;
         }
     
@@ -95,10 +97,44 @@
         }
     
         .project {
-            background-color: white;
+            position: relative;
+            width: auto;
+            height: auto;
+            margin: 15px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: height 0.3s;
             padding: 1rem;
             border-radius: 4px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add CSS for the project images */
+        .project img {
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+            width: 100%;
+            height: auto;
+            display: block;
+            padding: 5px; 
+        }
+
+        /* Add CSS for the project container on hover */
+        .project:hover {
+            transform: scale(1.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .project-images {
+            display: none;
+            position: auto;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
         }
     
         .project-title {
@@ -116,15 +152,23 @@
         }
 
         header {
-            margin-left: 250px; /* Offset main body by the sidebar */
+            margin-left: 250px; 
             padding: 20px;
+            background-position: bottom;
+            background-image: url('https://i.imgur.com/AU3UYzp.jpg');
         }
     </style>
 </head>
+
+
+
 <body>
+
     <header>
         <h1>Luka's Porfolio</h1>
     </header>
+
+
     <aside class="sidebar">
         <img class="profile-photo" src="headshot.jpeg" alt="Profile Photo">
         <section class="center">
@@ -133,38 +177,26 @@
                 <br><p>Software Engineer</p>
                 <br><p>Texas State University '23</p>
                 <br><p>Professional inquiries to: <a href="mailto:lukab.dev@proton.me">lukab.dev@proton.me</a></p>
-                <br><p> <a href="lbresume.pdf" download>Resume download</a></p>
+                <br><p> <a href="lbresume.pdf" download>Résumé download</a></p>
             </b>
         </section>
     </aside>
+
+
     <main>
-        <section class="center">
-        <h2>Links</h2>
-        <br>
-        </section>
-        <section class="social-links">
-            <a href="mailto:lukab.dev@proton.me">
-                <img class="email-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Email_Shiny_Icon.svg" alt="Email Me" />
-            </a>
-            <a href="https://linkedin.com/in/lukabrown" target="_blank">
-                <img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" alt="LinkedIn" />
-            </a>
-            <a href="https://github.com/lukabrown" target="_blank">
-                <img class="github-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub" />
-            </a>
-            <section id="resume">
-            <a href="lbresume.pdf" download>
-                <img class="pdf-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png" alt="Download Resume" />
-            </a></section>
-        </section>
+        
+        
         <section class="center">
             <h1>About Me</h1>
-            <p>Hi, I'm Luka Brown, a software engineer that loves C++! I am about to complete my undergraduate in May 2023 majoring in Computer Science; with enough credits for an 
-                Applied Mathematics minor too. I've learned many things from university, but mostly that I have an intense facination with how computers work at a core level. I enjoy 
-                knowing exactly what the code is doing and being able to optimize that efficiently, and C++ is low-level enough to make coding really fun for me. However, coding is not 
-                my only pastime. I am also a huge gamer! I play Overwatch all the time, and I even used to be on my college's esports team! These days I just play competitively in my off 
-                time, and I am ranked grandmaster. Not that it matters, but that is around the top 1% of players. More than anything, I think that just shows dedication to the things I love.</p>
         </section>
+        <p>&emsp; &emsp; &ensp; Hi, I'm Luka Brown, a software engineer that loves C++! I am about to complete my undergraduate in May 2023 majoring in Computer Science; with enough credits for an 
+            Applied Mathematics minor too. I've learned many things from university, but mostly that I have an intense facination with how computers work at a core level. I enjoy 
+            knowing exactly what the code is doing and being able to optimize that efficiently, and C++ is low-level enough to make coding really fun for me. However, coding is not 
+            my only pastime. I am also a huge gamer! I play Overwatch all the time, and I even used to be on my college's esports team! These days I just play competitively in my off 
+            time, and I am ranked grandmaster. Not that it matters, but that is around the top 1% of players. More than anything, I think that just shows dedication to the things I love.</p>
+        
+
+
         <section class="center">
             <h1>Projects</h1> 
             <br>
@@ -190,6 +222,11 @@
                         <i>6 weeks time</i>
                         <p>A C++-based cross-platform mining game developed in my spare time. Go fight enemy miners and stop at the shops to gear up!</p>
                         <a class="project-link" href="https://github.com/lukabrown/The-Deep-Below" target="_blank">View on GitHub</a>
+                        <div class="project-images">
+                        <img src="deepb1.png" alt="Main Deep Below Image">
+                        <img src="deepb2.png" alt="Enemy Miner Deep Below Image">
+                        <img src="deepb3.png" alt="Shop Deep Below Image">
+                        </div>
                     </div>
                     <div class="project">
                         <h3 class="project-title">KNN Regression</h3>
@@ -197,6 +234,9 @@
                         <i>2 weeks time</i>
                         <p>My personal implementation of the machine learning algorithm K-nearest-neighbors using euclidean distance between the wine dataset points.</p>
                         <a class="project-link" href="https://github.com/lukabrown/knn-regression" target="_blank">View on GitHub</a>
+                        <div class="project-images">
+                            <img src="knn.png" alt="Main KNN Image">
+                        </div>
                     </div>
                     <div class="project">
                         <h3 class="project-title">Same Card! Game</h3>
@@ -215,5 +255,25 @@
                     </div>
                     </div>
                     </section class="center">
+                    <section class="center">
+                        <br><h2>Links</h2>
+                        <br>
+                    </section>
+                    <section class="social-links">
+                        <a href="mailto:lukab.dev@proton.me">
+                            <img class="email-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Email_Shiny_Icon.svg" alt="Email Me" />
+                        </a>
+                        <a href="https://linkedin.com/in/lukabrown" target="_blank">
+                            <img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" alt="LinkedIn" />
+                        </a>
+                        <a href="https://github.com/lukabrown" target="_blank">
+                            <img class="github-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub" />
+                        </a>
+                        <section id="resume">
+                        <a href="lbresume.pdf" download>
+                            <img class="pdf-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png" alt="Download Resume" />
+                        </a></section>
+                    </section>
+
                     </body>
                     </html>
