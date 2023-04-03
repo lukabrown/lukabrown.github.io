@@ -169,6 +169,21 @@
             background-position: bottom;
             background-image: url('https://i.imgur.com/AU3UYzp.jpg');
         }
+        
+        @media screen and (max-width: 768px) {
+            .sidebar {
+              display: none;
+            }
+            main {
+                margin-left: 0px; 
+            }
+            header {
+                margin-left: 0px; 
+            }
+            .project:hover {
+                transform: scale(1);
+            }
+        }
     </style>
 
 </head>
@@ -327,7 +342,7 @@
     </main>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    function addEventListenersToProjects() {
         const projects = document.querySelectorAll(".project");
 
         projects.forEach(project => {
@@ -341,6 +356,17 @@
                 projectImages.classList.remove("project-images-visible");
             });
         });
+    }
+
+    function checkWindowSizeAndExecute() {
+        if (window.innerWidth >= 768) {
+            addEventListenersToProjects();
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        checkWindowSizeAndExecute();
+        window.addEventListener('resize', checkWindowSizeAndExecute);
     });
 </script>
 
