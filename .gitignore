@@ -1,0 +1,6 @@
+
+*.json
+*.vsidx
+*.lock
+.vs/lukabrown.github.io/v17/.wsuo
+.vs/slnx.sqlite
