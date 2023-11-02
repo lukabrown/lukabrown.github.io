@@ -8,201 +8,28 @@
     <meta name="keywords" content="Luka, Brown, SQL, AWS, C#, C++, Python, Java, HTML, CSS, JavaScript, DevOps, Software, Engineer, Developer, Resume, Job, Portfolio, Project, Austin, Full, Stack, Git, GitHub, Backend, Frontend">
     <meta name="description" content="Explore Luka Brown's portfolio, a proficient full stack developer. Currently based out of Austin, TX.">
     <link rel="icon" type="image/x-icon" href="./pics/Initials_Logo.png">
-
+    <link rel="stylesheet" href="style.css">
     <title>Luka Brown's Portfolio</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f8f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        main {
-            padding: 2rem;
-        }
-
-        a {
-            color: blue;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            color: darkblue;
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            margin: 0 1rem;
-        }
-
-        .social-links img {
-            height: 48px;
-        }
-
-        .linkedin-logo {
-            width: 177px;
-        }
-
-        .github-logo, .email-logo, .pdf-logo {
-            width: 48px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 240px;
-            background-color: #c9dcf9;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .profile-photo {
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project {
-            position: relative;
-            width: auto;
-            height: auto;
-            margin: 15px;
-            background-color: #f9c9e2;
-            border: 1px solid #ffaed7;
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: height 0.3s;
-            padding: 1rem;
-            border-radius: 4px;
-        }
-
-        .project img {
-            top: 100%;
-            left: 0;
-            white-space: nowrap;
-            width: 100%;
-            height: auto;
-            display: block;
-            padding: 5px;
-        }
-
-        .project:hover {
-            transform: scale(1.3);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .project-images {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            white-space: nowrap;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-link {
-            font-size: 0.875rem;
-        }
-
-        .project-images-visible {
-            display: block;
-        }
-
-        #about-me {
-            max-width: 1150px;
-            margin: 0 auto; 
-        }
-
-        main {
-            margin-left: 240px;
-            padding: 20px;
-        }
-
-        header {
-            margin-left: 240px;
-            padding: 20px;
-            background-position: bottom;
-            background-image: url('https://i.imgur.com/AU3UYzp.jpg');
-        }
-
-        @media screen and (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-
-            main {
-                margin-left: 0px;
-            }
-
-            header {
-                margin-left: 0px;
-            }
-        }
-
-        @media screen and (max-width: 1000px) {
-            .project:hover {
-                transform: scale(1);
-            }
-        }
-    </style>
 
 </head>
 
 
 <body>
+    <section class="center">
+        <div id="page_wrapper">
+            <nav>
+                <ul>
+                    <li><a href="./index.html"><b>About Me</b></a></li>
+                    <li><a href="./projects.html"><b>Projects</b></a></li>
+                    <li><a href="./resume.html"><b>Resume</b></a></li>
+                    <li><a href="./contact.html"><b>Contact</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
     <header>
-        <br><br><br><br><br>
+        <br><br><br><br><br><br>
     </header>
 
     <aside class="sidebar">
@@ -226,167 +53,45 @@
             <h2>About Me</h2>
         </section>
 
-        <div id="about-me">
-        <p> &emsp; &emsp; &ensp;
-            Hi, my name is Luka Brown, and I'm a software engineer with a passion for coding! 
-            I first learned that I enjoyed coding in highschool by creating small games in Python. 
-            The problems that coding will often present to me are very rewarding to solve with an optimal solution. 
-            These challenges will forever intrigue me and I have learned so much more about problem solving from my time in university. 
-        </p>
+        <div id="paragraph">
+            <p>
+                &emsp; &emsp; &ensp;
+                Hi, my name is Luka Brown, and I'm a software engineer with a passion for coding!
+                I first learned that I enjoyed coding in highschool by creating small games in Python.
+                The problems that coding will often present to me are very rewarding to solve with an optimal solution.
+                These challenges will forever intrigue me and I have learned so much more about problem solving from my time in university.
+            </p>
 
-        <p> &emsp; &emsp; &ensp;
-            I have earned my undergraduate degree at Texas State University, majoring in Computer Science and minoring in Applied Mathematics. 
-            Some of the courses I took include Machine Learning, Parallel Programming, Database Systems, Cybersecurity, and Operating Systems. 
-            Throughout my university experience, I've developed a deep fascination for understanding how computers work and ways to improve their efficiency. 
-            I take great pleasure in knowing precisely what my code is doing and optimizing it. 
-        </p>
+            <p>
+                &emsp; &emsp; &ensp;
+                I have earned my undergraduate degree at Texas State University, majoring in Computer Science and minoring in Applied Mathematics.
+                Some of the courses I took include Machine Learning, Parallel Programming, Database Systems, Cybersecurity, and Operating Systems.
+                Throughout my university experience, I've developed a deep fascination for understanding how computers work and ways to improve their efficiency.
+                I take great pleasure in knowing precisely what my code is doing and optimizing it.
+            </p>
 
-        <p> &emsp; &emsp; &ensp;
-            In addition to coding, I'm an avid gamer and have even built my own gaming PC. 
-            I am constantly finding new video games to enjoy but some past favorites include the Fallout series, (New Vegas is the best of course) the Mass Effect Series, the Portal series, and many more. 
-            Back in college I was even on the Esports team and played Overwatch. 
-            Through many dedicated hours in Overwatch, I ended my career peak at Grandmaster 1 which is in the top 1% of players. 
-            After Blizzard announced the cancellation of expansive PvE in Overwatch, I put it down for good and have been playing some new titles. 
-            More recently, I've been playing Baldur's Gate 3 (just finished a tactician playthrough), Everspace 2, Fortnite, and more.
-        </p>
+            <p>
+                &emsp; &emsp; &ensp;
+                In addition to coding, I'm an avid gamer and have even built my own gaming PC.
+                I am constantly finding new video games to enjoy but some past favorites include the Fallout series, (New Vegas is the best of course) the Mass Effect Series, the Portal series, and many more.
+                Back in college I was even on the Esports team and played Overwatch.
+                Through many dedicated hours in Overwatch, I ended my career peak at Grandmaster 1 which is in the top 1% of players.
+                After Blizzard announced the cancellation of expansive PvE in Overwatch, I put it down for good and have been playing some new titles.
+                More recently, I've been playing Baldur's Gate 3 (just finished a tactician playthrough), Everspace 2, Fortnite, and more.
+            </p>
 
-        <p> &emsp; &emsp; &ensp;
-            At the moment, I'm working as a DevOps Engineer at Aristocrat. 
-            Gaming has always been one of my main interests and I am glad to have the ability to assist other game developers with the applications I am creating. 
-            I've gained experience in creating multithreaded applications, machine learning analysis, website and GUI applications, and testing suites among other projects.  
-            With a passion for coding and a growth-oriented mindset, I'm confident that I can thrive in any environment that I find myself in. 
-        </p>
+            <p>
+                &emsp; &emsp; &ensp;
+                At the moment, I'm working as a DevOps Engineer at Aristocrat.
+                Gaming has always been one of my main interests and I am glad to have the ability to assist other game developers with the applications I am creating.
+                I've gained experience in creating multithreaded applications, machine learning analysis, website and GUI applications, and testing suites among other projects.
+                With a passion for coding and a growth-oriented mindset, I'm confident that I can thrive in any environment that I find myself in.
+            </p>
         </div>
 
-        <section class="center">
-            <h2>Projects</h2> 
-            <br>
-
-            <div class="projects-container">
-                <div class="projects">
-
-                    <div class="project">
-                        <h3 class="project-title">Secure Voting System</h3>
-                        <h4>Python</h4>
-                        <p>Implemented a decentralized voting simulator utilizing Directed Acyclic Graphs (DAGs), TangleCV, and blockchain technology in Python.</p>
-                        <a class="project-link" href="https://github.com/lukabrown/Secure-Voting-System" target="_blank">View on GitHub</a>
-
-                        <div class="project-images">
-                            <img src="./pics/Secure_Voting_Project.jpg" alt="Secure Voting Project Image">
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3 class="project-title">CPU Scheduling Simulation</h3>
-                        <h4>C++</h4>
-                        <p>Developed a discrete event simulator using First Come First Serve (FCFS) scheduling to process data for 10,000 randomly generated processes in C++.</p>
-                        <a class="project-link" href="https://github.com/lukabrown/CPU-Scheduling" target="_blank">View on GitHub</a>
-
-                        <div class="project-images">
-                            <img src="./pics/CPU_Scheduling_Simulator.png" alt="CPU Scheduling Image">
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3 class="project-title">The Deep Below</h3>
-                        <h4>C++</h4>
-                        <p>Created a cross-platform mining game in C++ that employs Object-Oriented Programming (OOP) concepts, enemy AI, saving and loading, and an upgrade ecosystem.</p>
-                        <a class="project-link" href="https://github.com/lukabrown/The-Deep-Below" target="_blank">View on GitHub</a>
-                        
-                        <div class="project-images">
-                            <img src="./pics/Deep_Below_Miner.png" alt="Enemy Miner Deep Below Image">
-                            <img src="./pics/Deep_Below_Shops.png" alt="Shop Deep Below Image">
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3 class="project-title">KNN Regression</h3>
-                        <h4>Python</h4>
-                        <p>Implemented a K-Nearest Neighbors (KNN) machine learning algorithm using the Euclidean distance metric to train and predict wine dataset values.</p>
-                        <a class="project-link" href="https://github.com/lukabrown/knn-regression" target="_blank">View on GitHub</a>
-                        
-                        <div class="project-images">
-                            <img src="./pics/KNN_Regression_Project.png" alt="KNN Example Image">
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3 class="./pics/project-title">Same Card! Game</h3>
-                        <h4>C++</h4>
-                        <p>Built a multi-threaded card game in C++ that utilizes mutexes to enforce thread synchronization and ensure a fair turn order. Each thread acts as a player.</p>
-                        <a class="project-link" href="https://github.com/lukabrown/thread-synchronous-game" target="_blank">View on GitHub</a>
-
-                        <div class="project-images">
-                            <img src="./pics/Same_Card_Game.png" alt="Card Game Image">
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <h3 class="project-title">Gradient Boosting Regression</h3>
-                        <h4>Python</h4>
-                        <p>Utilizes machine learning libraries to train a regression model on a housing price dataset. The model performed better than 75% of all submissions to the Kaggle competition.</p>
-                        <a class="project-link" href="https://github.com/lukabrown/Gradient-Boosting-Housing-Dataset/" target="_blank">View on GitHub</a>
-
-                        <div class="project-images">
-                            <img src="./pics/Gradient_Boosting_Project.png" alt="Gradient Boosting Results Image">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <br> <h2>Links</h2> <br>
-            
-        </section>
-
-        <div class="social-links">
-            <a href="mailto:lukab.dev@proton.me">
-                <img class="email-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Email_Shiny_Icon.svg" alt="Email Me">
-            </a>
-
-            <a href="https://linkedin.com/in/lukabrown" target="_blank">
-                <img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" alt="LinkedIn">
-            </a>
-
-            <a href="https://github.com/lukabrown" target="_blank">
-                <img class="github-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub">
-            </a>
-            <!--
-            <a href="lbresume.pdf" download>
-                <img class="pdf-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png" alt="Download Resume">
-            </a>
-            -->
-        </div>
     </main>
 
-    <script>
-        function addEventListenersToProjects() {
-            const projects = document.querySelectorAll(".project");
-
-            projects.forEach(project => {
-                project.addEventListener("mouseover", () => {
-                    const projectImages = project.querySelector(".project-images");
-                    projectImages.classList.add("project-images-visible");
-                });
-
-                project.addEventListener("mouseout", () => {
-                    const projectImages = project.querySelector(".project-images");
-                    projectImages.classList.remove("project-images-visible");
-                });
-            });
-        }
-
-        function checkWindowSizeAndExecute() {
-            if (window.innerWidth >= 768) {
-                addEventListenersToProjects();
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            checkWindowSizeAndExecute();
-            window.addEventListener('resize', checkWindowSizeAndExecute);
-        });
-    </script>
+    <script></script>
 
 </body>
 </html>
