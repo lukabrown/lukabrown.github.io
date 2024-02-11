@@ -216,3 +216,12 @@ header {
 		transform: scale(1);
 	}
 }
+
+form {
+	text-align: center;
+	margin: 0 auto;
+	width: calc(100% - 102px); /* 100% minus (aside width (100px) + border width (2px)); */
+	box-sizing: border-box;
+	max-width:1150px;
+
+}
