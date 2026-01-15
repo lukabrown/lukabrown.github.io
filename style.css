@@ -223,12 +223,10 @@ form {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-40%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 2.5rem solid black;  /* triangle color */
-  border-top: 1.5625rem solid transparent;
-  border-bottom: 1.5625rem solid transparent;
+  transform: translate(-47.5%, -50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 20 Q25 20 25 25 V75 Q25 80 30 80 L75 55 Q80 50 75 45 Z' fill='black'/%3E%3C/svg%3E");
 }
 
 .playButton:hover {
