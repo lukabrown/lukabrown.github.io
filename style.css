@@ -6,46 +6,20 @@ body {
 	margin-bottom: 60px;
 }
 
-#page_wrapper {
-	width: 100%;
-	max-width: 1024px;
-	margin: 0 auto;
+main {
+	margin-left: 240px;
+	padding: 20px;
 }
-
-nav {
-	height: 48px;
-	margin-left: 260px;
-	margin-right: 20px;
-}
-
-	nav ul {
-		padding: 2px;
-		display: flex;
-		justify-content: space-between;
-		list-style-type: none;
-	}
-
-	nav li a {
-		font-family: Arial, sans-serif;
-		color: black;
-		font-size: 1.3rem;
-		text-decoration: none;
-	}
-
-		nav li a:hover {
-			text-decoration: underline;
-			color: black;
-		}
 
 header {
 	background-color: #333;
 	color: white;
 	text-align: center;
 	padding: 1rem;
-}
-
-main {
-	padding: 2rem;
+	margin-left: 240px;
+	padding: 20px;
+	background-position: bottom;
+	background-image: url('https://i.imgur.com/AU3UYzp.jpg');
 }
 
 a {
@@ -53,10 +27,10 @@ a {
 	text-decoration: underline;
 }
 
-	a:hover {
-		color: darkblue;
-		text-decoration: underline;
-	}
+a:hover {
+	color: darkblue;
+	text-decoration: underline;
+}
 
 h2 {
 	font-size: 1.5rem;
@@ -68,19 +42,53 @@ p {
 	line-height: 1.5;
 }
 
+nav {
+	height: 48px;
+	margin-left: 260px;
+	margin-right: 20px;
+}
+
+nav ul {
+	padding: 2px;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+nav li a {
+	font-family: Arial, sans-serif;
+	color: black;
+	font-size: 1.3rem;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+form {
+	text-align: center;
+	margin: 0 auto;
+	width: calc(100% - 102px); /* 100% minus (aside width (100px) + border width (2px)); */
+	box-sizing: border-box;
+	max-width:1150px;
+
+}
+
 .social-links {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 2rem;
 }
 
-	.social-links a {
-		margin: 0 1rem;
-	}
+.social-links a {
+	margin: 0 1rem;
+}
 
-	.social-links img {
-		height: 48px;
-	}
+.social-links img {
+	height: 48px;
+}
 
 .linkedin-logo {
 	width: 177px;
@@ -105,6 +113,12 @@ p {
 	box-sizing: border-box;
 }
 
+.page_wrapper {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
 .profile-photo {
 	width: 100%;
 	height: auto;
@@ -119,10 +133,10 @@ p {
 	justify-content: center;
 }
 
-	.projects-container {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+.projects-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 
 .project {
 	position: relative;
@@ -138,50 +152,50 @@ p {
 	border-radius: 4px;
 }
 
-	.project img {
-		top: 100%;
-		left: 0;
-		white-space: nowrap;
-		width: 100%;
-		height: auto;
-		display: block;
-		padding: 5px;
-	}
+.project img {
+	top: 100%;
+	left: 0;
+	white-space: nowrap;
+	width: 100%;
+	height: auto;
+	display: block;
+	padding: 5px;
+}
 
-	.project:hover {
-		transform: scale(1.3);
-		transition: transform 0.3s ease;
-		cursor: pointer;
-		z-index: 1;
-	}
+.project:hover {
+	transform: scale(1.3);
+	transition: transform 0.3s ease;
+	cursor: pointer;
+	z-index: 1;
+}
 
-	.project-images {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		white-space: nowrap;
-	}
+.project-images {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	white-space: nowrap;
+}
 
-	.project-title {
-		font-size: 1.25rem;
-		margin-bottom: 0.5rem;
-	}
+.project-title {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
 
-	.project-link {
-		font-size: 0.875rem;
-	}
+.project-link {
+	font-size: 0.875rem;
+}
 
-	.project-images-visible {
-		display: block;
-	}
+.project-images-visible {
+	display: block;
+}
 
-#paragraph {
+.intro_paragraphs {
 	max-width: 1150px;
 	margin: 0 auto;
 }
 
-#splash {
+.splash {
   position: fixed;
   top: 0;
   left: 0;
@@ -194,7 +208,7 @@ p {
   z-index: 9999;
 }
 
-#playButton {
+.playButton {
   width: 100px;
   height: 100px;
   background-color: white;
@@ -205,7 +219,7 @@ p {
   transition: transform 0.2s;
 }
 
-#playButton::after {
+.playButton::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -218,20 +232,8 @@ p {
   border-bottom: 25px solid transparent;
 }
 
-#playButton:hover {
+.playButton:hover {
   transform: scale(1.1);
-}
-
-main {
-	margin-left: 240px;
-	padding: 20px;
-}
-
-header {
-	margin-left: 240px;
-	padding: 20px;
-	background-position: bottom;
-	background-image: url('https://i.imgur.com/AU3UYzp.jpg');
 }
 
 @media screen and (max-width: 768px) {
@@ -256,13 +258,4 @@ header {
 	.project:hover {
 		transform: scale(1);
 	}
-}
-
-form {
-	text-align: center;
-	margin: 0 auto;
-	width: calc(100% - 102px); /* 100% minus (aside width (100px) + border width (2px)); */
-	box-sizing: border-box;
-	max-width:1150px;
-
 }
