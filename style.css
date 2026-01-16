@@ -65,6 +65,13 @@ h2 {
 	margin-bottom: 0.5rem;
 }
 
+h3 {
+	font-size: 1.5rem;
+	display: block;
+	width: 100%;
+	border-bottom: 2px solid currentColor;
+}
+
 p {
 	font-size: 1rem;
 	line-height: 1.5;
@@ -292,6 +299,16 @@ form {
 
 .themeButton:hover {
 	text-decoration: underline;
+}
+
+.resume {
+	font-family: Consolas, "Courier New", monospace;
+	max-width: 55rem;
+	margin: 0 auto;
+}
+
+.right {
+	text-align: right;
 }
 
 @media screen and (max-width: 48rem) {
