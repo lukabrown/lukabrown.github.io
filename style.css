@@ -1,6 +1,33 @@
+:root {
+  --bg-color: #f9f8f2;
+  --splash-bg-color: #ffc5d3;
+  --text-color: black;
+  --link-color: blue;
+  --link-hover-color: darkblue;
+  --sidebar-color: #c9dcf9;
+  --project-color: #ffc5d3;
+  --project-border-color: #dfadb9;
+  --play-button-bg-color: white;
+  --play-button-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0a2342;
+  --splash-bg-color: #0a2342;
+  --text-color: #f4f7f5;
+  --sidebar-text-color: #0a2342;
+  --link-color: #0f5555;
+  --link-hover-color: #198f8f;
+  --sidebar-color: #dd99bb;
+  --project-color: #dd99bb;
+  --project-border-color: #dd99bb;
+  --play-button-bg-color: #f4f7f5;
+  --play-button-color: #f4f7f5;
+}
+
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f9f8f2;
+	background-color: var(--bg-color);
 	margin: 0;
 	padding: 0;
 	margin-bottom: 3.75rem;
@@ -9,11 +36,10 @@ body {
 main {
 	margin-left: 15rem;
 	padding: 1.25rem;
+	color: var(--text-color)
 }
 
 header {
-	background-color: #333;
-	color: white;
 	text-align: center;
 	padding: 1rem;
 	margin-left: 15rem;
@@ -23,12 +49,12 @@ header {
 }
 
 a {
-	color: blue;
+	color: var(--link-color);
 	text-decoration: underline;
 }
 
 a:hover {
-	color: darkblue;
+	color: var(--link-hover-color);
 	text-decoration: underline;
 }
 
@@ -40,6 +66,7 @@ h2 {
 p {
 	font-size: 1rem;
 	line-height: 1.5;
+	color: var(--text-color);
 }
 
 nav {
@@ -57,14 +84,14 @@ nav ul {
 
 nav li a {
 	font-family: Arial, sans-serif;
-	color: black;
+	color: var(--text-color);
 	font-size: 1.3rem;
 	text-decoration: none;
 }
 
 nav li a:hover {
 	text-decoration: underline;
-	color: black;
+	color: var(--text-color);
 }
 
 form {
@@ -101,16 +128,21 @@ form {
 	text-align: center;
 }
 
-.sidebar {
+.sidebar{
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 15rem;
-	background-color: #c9dcf9;
+	background-color: var(--sidebar-color);
 	padding: 1.25rem;
 	box-sizing: border-box;
+	color: var(--sidebar-text-color);
 }
+
+ .sidebar p {
+	color: var(--sidebar-text-color);
+ }
 
 .page_wrapper {
 	width: 100%;
@@ -142,8 +174,8 @@ form {
 	width: auto;
 	height: auto;
 	margin: .9375rem;
-	background-color: #ffc5d3;
-	border: 1px solid #dfadb9;
+	background-color: var(--project-color);
+	border: 1px solid var(--project-border-color);
 	margin-bottom: 1.25rem;
 	cursor: pointer;
 	transition: height 0.3s;
@@ -200,7 +232,7 @@ form {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffc5d3; /* blank screen */
+  background-color: var(--splash-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +242,7 @@ form {
 .playButton {
   width: 6.25rem;
   height: 6.25rem;
-  background-color: white;
+  background-color: var(--play-button-bg-color);
   border: none;
   border-radius: 50%; /* circle */
   position: relative;
@@ -224,6 +256,7 @@ form {
   top: 50%;
   left: 50%;
   transform: translate(-47.5%, -50%);
+  background-color: var(--play-button-color);
   width: 4.5rem;
   height: 4.5rem;
   background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 20 Q25 20 25 25 V75 Q25 80 30 80 L75 55 Q80 50 75 45 Z' fill='black'/%3E%3C/svg%3E");
@@ -231,6 +264,20 @@ form {
 
 .playButton:hover {
   transform: scale(1.1);
+}
+
+.themeButton {
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 48rem) {

@@ -21,10 +21,41 @@ function checkWindowSizeAndExecute() {
     }
 }
 
+/*Respect system preferences*/
+(function() {
+    if (!localStorage.getItem("theme")) {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute(
+            "data-theme",
+            prefersDark ? "dark" : "light"
+        );
+        localStorage.setItem("theme", prefersDark ? "light" : "dark");
+    }
+})();
+
+/*Persist the user’s preference*/
+(function() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
     const splash = document.querySelector(".splash");
     const playButton = document.querySelector(".playButton");
     const projectPage = document.querySelector(".projects");
+    const toggle = document.querySelector(".themeButton");
+    const root = document.documentElement;
+
+    /*Toggle the theme based on button click*/
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            const isDark = root.getAttribute("data-theme") === "dark";
+            root.setAttribute("data-theme", isDark ? "light" : "dark");
+            localStorage.setItem("theme", isDark ? "light" : "dark");
+        });
+    }
 
     if (projectPage) {
         checkWindowSizeAndExecute();
