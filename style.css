@@ -305,6 +305,9 @@ form {
 	font-family: Consolas, "Courier New", monospace;
 	max-width: 55rem;
 	margin: 0 auto;
+	white-space: normal; /* allow lines to wrap */
+    word-wrap: break-word; /* break long words/URLs if needed */
+    overflow-wrap: break-word; /* same as above, modern standard */
 }
 
 .right {
@@ -325,8 +328,29 @@ form {
 	}
 
 	nav {
-		margin-left: 1.25rem;
-	}
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    nav li a {
+        width: 100%;
+        text-align: center;
+		box-sizing: border-box;
+    }
+
+	.social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 62.5rem) {
