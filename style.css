@@ -305,9 +305,6 @@ form {
 	font-family: Consolas, "Courier New", monospace;
 	max-width: 55rem;
 	margin: 0 auto;
-	white-space: normal; /* allow lines to wrap */
-    word-wrap: break-word; /* break long words/URLs if needed */
-    overflow-wrap: break-word; /* same as above, modern standard */
 }
 
 .right {
