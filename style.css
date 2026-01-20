@@ -28,8 +28,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
