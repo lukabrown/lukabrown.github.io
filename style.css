@@ -5,6 +5,7 @@
     --link-color: #164b8d;
     --link-hover-color: #0c2e58;
     --sidebar-color: #ffc5d3;
+    --sidebar-text-color: black;
     --project-color: #ffc5d3;
     --project-border-color: #dfadb9;
     --play-button-bg-color: white;
@@ -16,10 +17,10 @@
     --bg-color: #0a2342;
     --splash-bg-color: #0a2342;
     --text-color: #f4f7f5;
-    --sidebar-text-color: #0a2342;
     --link-color: #e42186;
     --link-hover-color: #ff0084;
     --sidebar-color: #dd99bb;
+    --sidebar-text-color: #0a2342;
     --project-color: #dd99bb;
     --project-border-color: #bc829f;
     --play-button-bg-color: #f4f7f5;

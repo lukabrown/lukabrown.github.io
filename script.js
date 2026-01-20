@@ -21,26 +21,6 @@ function checkWindowSizeAndExecute() {
     }
 }
 
-/*Respect system preferences*/
-(function() {
-    if (!localStorage.getItem("theme")) {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.setAttribute(
-            "data-theme",
-            prefersDark ? "dark" : "light"
-        );
-        localStorage.setItem("theme", prefersDark ? "light" : "dark");
-    }
-})();
-
-/*Persist the user’s preference*/
-(function() {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-    }
-})();
-
 document.addEventListener("DOMContentLoaded", () => {
     const splash = document.querySelector(".splash");
     const playButton = document.querySelector(".playButton");
