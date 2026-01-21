@@ -97,7 +97,9 @@ nav li a {
   font-family: Arial, sans-serif;
   font-size: 1.3rem;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
   background-color: var(--theme-toggle-bg-color);
@@ -142,6 +144,12 @@ form {
 .email-logo,
 .pdf-logo {
   width: 3rem;
+}
+
+.moon-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
 }
 
 .center {
@@ -281,20 +289,14 @@ form {
 
 .themeButton {
   font-family: Arial, sans-serif;
-  bottom: 1rem;
-  right: 1rem;
-  padding: 1rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
   background-color: var(--theme-toggle-bg-color);
   color: var(--theme-toggle-text-color);
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-}
-
-.themeButton:hover {
-  text-decoration: underline;
 }
 
 .resume {
@@ -309,13 +311,20 @@ form {
   text-align: right;
 }
 
+@media screen and (max-width: 75rem) {
+
+  nav ul {
+    gap: 8%;
+  }
+}
+
 @media screen and (max-width: 62.5rem) {
   .project:hover {
     transform: scale(1);
   }
 
   nav ul {
-    gap: 5%;
+    gap: 3.9%;
   }
 }
 
@@ -348,6 +357,14 @@ form {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+  }
+
+  .themeButton {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
   }
 
   .social-links {
