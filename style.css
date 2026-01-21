@@ -127,6 +127,12 @@ form {
   max-width: 71.875rem;
 }
 
+footer {
+  margin-left: 15rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -144,14 +150,9 @@ form {
   background-color: var(--theme-toggle-bg-color);
 }
 
+.github-logo,
 .linkedin-logo {
   width: 11.0625rem;
-}
-
-.github-logo,
-.email-logo,
-.pdf-logo {
-  width: 3rem;
 }
 
 .moon-icon {
@@ -319,24 +320,29 @@ form {
   text-align: right;
 }
 
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 95em) {
+  .project:hover {
+    transform: scale(1.1);
+  }
+}
 
+@media screen and (max-width: 75rem) {
   nav ul {
     gap: 8%;
   }
 }
 
 @media screen and (max-width: 62.5rem) {
-  .project:hover {
-    transform: scale(1);
-  }
-
   nav ul {
     gap: 3%;
   }
 }
 
 @media screen and (max-width: 48rem) {
+  .project:hover {
+    transform: scale(1);
+  }
+
   .sidebar {
     display: none;
   }
@@ -379,5 +385,9 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  footer {
+    margin-left: 0rem;
   }
 }
