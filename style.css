@@ -28,6 +28,14 @@
   --theme-toggle-text-color: #000;
 }
 
+:root[data-theme="light"] #themeIcon {
+  content: url("./pics/Moon_Icon.png");
+}
+
+:root[data-theme="dark"] #themeIcon {
+  content: url("./pics/Light_Moon_Icon.png");
+}
+
 body {
   background-color: var(--bg-color);
   font-family: Arial, sans-serif;
