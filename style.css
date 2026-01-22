@@ -184,6 +184,15 @@ textarea {
   background-color: var(--theme-toggle-bg-color);
 }
 
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .github-logo,
 .linkedin-logo {
   width: 11.0625rem;
