@@ -122,15 +122,40 @@ nav li a:hover {
 form {
   text-align: center;
   margin: 0 auto;
-  width: calc(100% - 6.375rem); /* 100% minus (aside width (100px) + border width (2px)); */
+  width: 35rem;
+  max-width: calc(100% - 6.375rem); /* 100% minus (aside width (100px) + border width (2px)); */
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--theme-toggle-bg-color);
+}
+
+form p {
+  color: var(--theme-toggle-text-color);
+  line-height: .2;
+}
+
+form input,
+form textarea {
+  width: 100%;
   box-sizing: border-box;
-  max-width: 71.875rem;
+}
+
+form .themeButton{
+  background-color: var(--sidebar-color);
+}
+
+form .themeButton:hover{
+  text-decoration: underline;
 }
 
 footer {
   margin-left: 15rem;
-  margin-bottom: 2rem;
+  padding-bottom: 3rem;
   color: var(--text-color);
+}
+
+textarea {
+  resize: none;
 }
 
 .social-links {
