@@ -117,6 +117,7 @@ nav li a {
 nav li a:hover {
   text-decoration: underline;
   color: var(--theme-toggle-text-color);
+  filter: brightness(0.8);
 }
 
 form {
@@ -148,6 +149,10 @@ form .themeButton:hover{
   text-decoration: underline;
 }
 
+form .themeButton:hover {
+  filter: brightness(0.9);
+}
+
 footer {
   margin-left: 15rem;
   padding-bottom: 3.75rem;
@@ -166,6 +171,10 @@ textarea {
 
 .social-links a {
   margin: 0 1rem;
+}
+
+.social-links a:hover {
+  filter: brightness(0.8);
 }
 
 .social-links img {
@@ -331,6 +340,10 @@ textarea {
   border-radius: 0.5rem;
   background-color: var(--theme-toggle-bg-color);
   color: var(--theme-toggle-text-color);
+}
+
+.themeButton:hover{
+  filter: brightness(0.8);
 }
 
 .resume {
