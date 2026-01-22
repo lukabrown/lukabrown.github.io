@@ -298,6 +298,7 @@ textarea {
 .intro_paragraphs {
   max-width: 55rem;
   margin: 0 auto;
+  text-indent: 3rem;
 }
 
 .splash {
