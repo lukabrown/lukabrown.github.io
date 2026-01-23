@@ -2,7 +2,14 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://challenges.cloudflare.com">
   <script src="theme.js"></script>
+  <script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+  ></script> <!-- Cloudflare Turnstile script -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Luka Brown">
@@ -55,6 +62,10 @@
     </section>
 
     <form name="EmailForm">
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAACOOf6Vo10SIz3ho" data-appearance="interaction-only"></div>
+      <!-- Hidden field automatically added: -->
+      <!-- <input type="hidden" name="cf-turnstile-response" value="TOKEN_VALUE" /> -->
+
       <div class="hp-field" aria-hidden="true">
         <label for="FavoriteColor">Favorite Color</label>
         <input type="text" name="favoriteColor" tabindex="-1" autocomplete="off">
