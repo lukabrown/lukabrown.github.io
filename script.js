@@ -70,11 +70,7 @@ function checkWindowSizeAndExecute() {
         headers: {
           "content-type": "application/json",
           "x-api-key": "I5MJxbjsQzaF7kUoY2hdO7OK2q2JyXa4qUQpZVZd",
-          "x-turnstile-token": turnstileToken,
-          "access-control-allow-headers": "Content-Type,X-Api-Key,X-Turnstile-Token",
-          "access-control-allow-methods": "OPTIONS,POST",
-          "access-control-allow-origin": "https://www.luka-brown.com",
-          "access-control-max-age": "300"
+          "x-turnstile-token": turnstileToken
         },
         body: JSON.stringify(payload)
       });
