@@ -368,6 +368,26 @@ textarea {
   text-align: right;
 }
 
+.form-response {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin: 1rem auto 0;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--theme-toggle-bg-color);
+  color: var(--theme-toggle-text-color);
+  width: 35rem;
+  max-width: calc(100% - 6.375rem); /* 100% minus (aside width (100px) + border width (2px)); */
+  display: none;
+}
+
+.form-response.has-content {
+  display: block;
+}
+
 @media screen and (max-width: 95em) {
   .project:hover {
     transform: scale(1.1);

@@ -25,7 +25,7 @@ function checkWindowSizeAndExecute() {
   if (location.pathname !== "/contact") return;
   const form = document.forms["EmailForm"];
   const sendButton = form.querySelector("button.themeButton");
-  const responseEl = document.getElementById("form-response");
+  const responseEl = document.querySelector("form-response");
 
   function setResponse(message, isError = false) {
     responseEl.textContent = message;
@@ -57,8 +57,8 @@ function checkWindowSizeAndExecute() {
 
     /* Basic client-side validation */
     if (!payload.body) {
-    setResponse("Message is required.", true);
-      return;
+      setResponse("Message is required.", true);
+        return;
     }
 
     sendButton.disabled = true;
