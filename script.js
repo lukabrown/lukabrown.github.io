@@ -73,7 +73,7 @@ function checkWindowSizeAndExecute() {
           "x-turnstile-token": turnstileToken,
           "access-control-allow-headers": "Content-Type,X-Api-Key,X-Turnstile-Token",
           "access-cntrol-allow-methods": "OPTIONS,POST",
-          "access-control-allow-origin": "www.luka-brown.com",
+          "access-control-allow-origin": "https://www.luka-brown.com",
           "access-control-max-age": "300"
         },
         body: JSON.stringify(payload)
