@@ -40,6 +40,37 @@ function checkWindowSizeAndExecute() {
       return;
     }
 
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    /* Basic client-side validation */
+    if (email === "") {
+      setResponse("Email is required.", true);
+      return;
+    }
+
+    const parts = email.split("@");
+
+    // Must be exactly one @
+    if (parts.length !== 2) {
+      setResponse("Valid email is required.", true);
+      return;
+    }
+
+    const domain = parts[1];
+
+    // Domain must contain exactly one period
+    if (!domain.includes(".") || domain.startsWith(".") || domain.endsWith(".")) {
+      setResponse("Valid email is required.", true);
+      return;
+    }
+
+    if (message === "") {
+      setResponse("Message is required.", true);
+      return;
+    }
+
     /* Get Turnstile token */
     const turnstileToken =
     form.querySelector('input[name="cf-turnstile-response"]')?.value;
@@ -51,15 +82,9 @@ function checkWindowSizeAndExecute() {
 
     /* Build payload */
     const payload = {
-      subject: form.name.value.trim() + " sent a message via your website",
-      body: "Email: " + form.email.value.trim() + " Message: " + form.message.value.trim()
+      subject: name + " sent a message via your website",
+      body: "Email: " + email + " Message: " + message
     };
-
-    /* Basic client-side validation */
-    if (!payload.body) {
-      setResponse("Message is required.", true);
-        return;
-    }
 
     sendButton.disabled = true;
     setResponse("Sending…");
