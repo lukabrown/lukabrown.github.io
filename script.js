@@ -71,6 +71,10 @@ function checkWindowSizeAndExecute() {
       return;
     }
 
+    if (name === "") {
+      name = email;
+    }
+
     /* Get Turnstile token */
     const turnstileToken =
     form.querySelector('input[name="cf-turnstile-response"]')?.value;
