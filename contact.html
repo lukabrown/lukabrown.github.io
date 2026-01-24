@@ -70,6 +70,7 @@
       <script>
         function onExpired() {
           console.log('Token expired, executing turnstile challenege again.');
+          turnstile.reset();
           turnstile.execute();
         }
       </script>
