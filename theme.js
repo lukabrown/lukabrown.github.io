@@ -7,7 +7,6 @@
     root.setAttribute("data-theme", theme);
   }
 
-  // 1. Apply saved theme OR system preference
   if (savedTheme) {
     applyTheme(savedTheme);
   } else {

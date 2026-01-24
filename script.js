@@ -21,6 +21,40 @@ function checkWindowSizeAndExecute() {
   }
 }
 
+function setTheme(theme) {
+  const themeIcon = document.getElementById("themeIcon");
+  const root = document.documentElement;
+  root.dataset.theme = theme;
+  if (theme === "dark") {
+    themeIcon.src = "./pics/Light_Moon_Icon.png";
+    themeIcon.alt = "Switch to light theme";
+  } else {
+    themeIcon.src = "./pics/Moon_Icon.png";
+    themeIcon.alt = "Switch to dark theme";
+  }
+}
+
+(function () {
+  function getInitialTheme() {
+    const saved = localStorage.getItem("theme");
+    if (saved) return saved;
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+  const themeIcon = document.getElementById("themeIcon");
+  const theme = getInitialTheme();
+
+  if (theme === "dark") {
+    themeIcon.src = "./pics/Light_Moon_Icon.png";
+    themeIcon.alt = "Switch to light theme";
+  } else {
+    themeIcon.src = "./pics/Moon_Icon.png";
+    themeIcon.alt = "Switch to dark theme";
+  }
+})();
+
 (function () {
   if (location.pathname !== "/contact") return;
   const form = document.forms["EmailForm"];
@@ -40,7 +74,7 @@ function checkWindowSizeAndExecute() {
       return;
     }
 
-    const name = form.name.value.trim();
+    var name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
 
@@ -71,10 +105,6 @@ function checkWindowSizeAndExecute() {
       return;
     }
 
-    if (name === "") {
-      name = email;
-    }
-
     /* Get Turnstile token */
     const turnstileToken =
     form.querySelector('input[name="cf-turnstile-response"]')?.value;
@@ -82,6 +112,10 @@ function checkWindowSizeAndExecute() {
     if (!turnstileToken) {
       setResponse("Verification failed. Please try again.", true);
       return;
+    }
+
+    if (name === "") {
+      name = email;
     }
 
     /* Build payload */
@@ -132,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => {
       const isDark = root.getAttribute("data-theme") === "dark";
       root.setAttribute("data-theme", isDark ? "light" : "dark");
+      setTheme(isDark ? "light" : "dark");
       localStorage.setItem("theme", isDark ? "light" : "dark");
     });
   }
@@ -139,11 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (projectPage) {
     checkWindowSizeAndExecute();
     window.addEventListener('resize', checkWindowSizeAndExecute);
-  };
+  }
 
   if (splash && playButton) {
     document.querySelector(".playButton").addEventListener("click", () => {
     document.querySelector(".splash").style.display = "none";
     });
-  };
+  }
 });
