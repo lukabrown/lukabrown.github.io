@@ -68,13 +68,13 @@ function checkWindowSizeAndExecute() {
       const res = await fetch("https://api.luka-brown.com/email", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "content-type": "application/json",
           "x-api-key": "I5MJxbjsQzaF7kUoY2hdO7OK2q2JyXa4qUQpZVZd",
           "x-turnstile-token": turnstileToken,
-          "Access-Control-Allow-Headers": "Content-Type,X-Api-Key,X-Turnstile-Token",
-          "Access-Control-Allow-Methods": "OPTIONS,POST",
-          "Access-Control-Allow-Origin": "www.luka-brown.com",
-          "Access-Control-Max-Age": "300"
+          "access-control-allow-headers": "Content-Type,X-Api-Key,X-Turnstile-Token",
+          "access-cntrol-allow-methods": "OPTIONS,POST",
+          "access-control-allow-origin": "www.luka-brown.com",
+          "access-control-max-age": "300"
         },
         body: JSON.stringify(payload)
       });
