@@ -164,6 +164,10 @@ textarea {
   resize: none;
 }
 
+.cf-turnstile {
+  display: none;
+}
+
 .social-links {
   display: flex;
   justify-content: center;

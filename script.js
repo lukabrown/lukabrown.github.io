@@ -86,6 +86,7 @@ function checkWindowSizeAndExecute() {
       body: "Email: " + email + " Message: " + message
     };
 
+    form.style.display = "none";
     sendButton.disabled = true;
     setResponse("Sending…");
 
@@ -107,7 +108,6 @@ function checkWindowSizeAndExecute() {
       }
 
       setResponse(data.message || "Message sent successfully.");
-      form.reset();
     } catch (err) {
       setResponse(err.message || "An unexpected error occurred.", true);
     } finally {

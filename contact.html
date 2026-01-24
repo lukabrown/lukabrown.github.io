@@ -62,7 +62,17 @@
     </section>
 
     <form name="EmailForm">
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAACOOf6Vo10SIz3ho" data-appearance="interaction-only"></div>
+      <div class="cf-turnstile"
+        data-sitekey="0x4AAAAAACOOf6Vo10SIz3ho"
+        data-appearance="interaction-only"
+        data-expired-callback="onExpired"
+      ></div>
+      <script>
+        function onExpired() {
+          console.log('Token expired, executing turnstile challenege again.');
+          turnstile.execute();
+        }
+      </script>
       <!-- Hidden field automatically added: -->
       <!-- <input type="hidden" name="cf-turnstile-response" value="TOKEN_VALUE" /> -->
 
