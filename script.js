@@ -25,7 +25,7 @@ function checkWindowSizeAndExecute() {
   if (location.pathname !== "/contact") return;
   const form = document.forms["EmailForm"];
   const sendButton = form.querySelector("button.themeButton");
-  const responseEl = document.querySelector("form-response");
+  const responseEl = document.querySelector(".form-response");
 
   function setResponse(message, isError = false) {
     responseEl.textContent = message;
