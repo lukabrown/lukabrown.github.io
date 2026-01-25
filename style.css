@@ -251,7 +251,7 @@ textarea {
   cursor: pointer;
   transition: height 0.3s;
   padding: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .project img {
