@@ -158,9 +158,12 @@ textarea {
 
 .recent-games {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 1.5rem;
   justify-content: center;
+  margin: 0 auto;
+  margin-left: 15rem;
+  max-width: 65rem;
 }
 
 .game-card {
@@ -178,7 +181,7 @@ textarea {
 
 .game-card h2 {
   font-size: 1rem;
-  color: var(--project-color);
+  color: var(--text-color);
 }
 
 .cf-turnstile {
@@ -433,6 +436,10 @@ textarea {
 @media screen and (max-width: 48rem) {
   .project:hover {
     transform: scale(1);
+  }
+
+  .recent-games {
+    margin-left: auto;
   }
 
   .sidebar {
