@@ -229,8 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (splash && playButton) {
-    document.querySelector(".playButton").addEventListener("click", () => {
-    document.querySelector(".splash").style.display = "none";
+    playButton.addEventListener("click", () => {
+      document.querySelector(".splash").style.display = "none";
     });
   }
 });
