@@ -154,6 +154,58 @@ function setTheme(theme) {
   });
 })();
 
+async function loadRecentGames() {
+  try {
+    const response = await fetch("https://api.luka-brown.com/games", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`API request failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.games)) {
+      throw new Error("Invalid API response: 'games' is not an array");
+    }
+
+    renderGames(data.games);
+  } catch (error) {
+    console.error("Failed to load recent games:", error);
+  }
+}
+
+function renderGames(games) {
+  const containers = document.querySelectorAll(".recent-games");
+
+  containers.forEach(container => {
+    container.innerHTML = ""; // Clear existing content
+
+    games.forEach(game => {
+      const card = document.createElement("div");
+      card.className = "game-card";
+
+      const img = document.createElement("img");
+      img.src = game.url;
+      img.alt = game.name;
+      img.loading = "lazy";
+
+      const title = document.createElement("h3");
+      title.textContent = game.name;
+
+      card.appendChild(img);
+      card.appendChild(title);
+      container.appendChild(card);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", loadRecentGames);
+
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.querySelector(".splash");
   const playButton = document.querySelector(".playButton");
