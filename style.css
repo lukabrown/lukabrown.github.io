@@ -158,30 +158,27 @@ textarea {
 
 .recent-games {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* two columns */
-  justify-content: center; /* center the grid horizontally */
-  gap: 16px; /* space between cards */
-  max-width: 20rem; /* optional: constrain width */
-  margin: 0 auto; /* center the container */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  justify-content: center;
 }
 
 .game-card {
-  background: #1b1b1b;
-  padding: 12px;
-  border-radius: 8px;
+  background: var(--project-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
   text-align: center;
 }
 
 .game-card img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
 }
 
 .game-card h2 {
-  margin-top: 8px;
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--project-color);
 }
 
 .cf-turnstile {
