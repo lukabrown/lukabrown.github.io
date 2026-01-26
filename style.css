@@ -156,10 +156,13 @@ textarea {
   resize: none;
 }
 
-.games-container {
+.recent-games {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr); /* two columns */
+  justify-content: center; /* center the grid horizontally */
+  gap: 16px; /* space between cards */
+  max-width: 20rem; /* optional: constrain width */
+  margin: 0 auto; /* center the container */
 }
 
 .game-card {
@@ -175,7 +178,7 @@ textarea {
   border-radius: 6px;
 }
 
-.game-card h3 {
+.game-card h2 {
   margin-top: 8px;
   font-size: 1rem;
   color: #ffffff;

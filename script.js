@@ -194,11 +194,11 @@ function renderGames(games) {
       img.alt = game.name;
       img.loading = "lazy";
 
-      const title = document.createElement("h3");
+      const title = document.createElement("h2");
       title.textContent = game.name;
 
-      card.appendChild(img);
       card.appendChild(title);
+      card.appendChild(img);
       container.appendChild(card);
     });
   });
