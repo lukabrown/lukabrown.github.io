@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (splash && playButton) {
     playButton.addEventListener("click", () => {
-      document.querySelector(".splash").style.display = "none";
+      splash.style.display = "none";
     });
   }
 });
