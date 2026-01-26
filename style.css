@@ -157,28 +157,28 @@ textarea {
 }
 
 .games-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
 }
 
 .game-card {
-    background: #1b1b1b;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
+  background: #1b1b1b;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .game-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 .game-card h3 {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #ffffff;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .cf-turnstile {
