@@ -165,6 +165,11 @@ textarea {
   max-width: 75rem;
 }
 
+.recent-games > .game-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 .game-card {
   background: var(--project-color);
   padding: 1rem;
@@ -489,12 +494,5 @@ textarea {
 
   footer {
     margin-left: 0rem;
-  }
-}
-
-@container (min-width: 44rem) {
-  .recent-games > .game-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    justify-self: center;
   }
 }
