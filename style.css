@@ -158,7 +158,7 @@ textarea {
 
 .recent-games {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   gap: 2rem;
   justify-content: center;
   margin: 0 auto;
@@ -431,6 +431,13 @@ textarea {
 @media screen and (max-width: 62.5rem) {
   nav ul {
     gap: 3%;
+  }
+}
+
+@media screen and (max-width: 62.5rem) {
+  .recent-games > .game-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
   }
 }
 
