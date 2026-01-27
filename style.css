@@ -434,14 +434,6 @@ textarea {
   }
 }
 
-@media screen and (min-width: 60rem) {
-  .recent-games > .game-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc((100% - (var(--gap) * (var(--cols) - 1))) / var(--cols));
-  }
-}
-
 @media screen and (max-width: 48rem) {
   .project:hover {
     transform: scale(1);
