@@ -438,6 +438,7 @@ textarea {
   .recent-games > .game-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
+    width: calc((100% - (var(--gap) * (var(--cols) - 1))) / var(--cols));
   }
 }
 
