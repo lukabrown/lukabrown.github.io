@@ -183,7 +183,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: clamp(1rem, 50cqmin, 5rem);
   color: var(--text-color);
 }
 
