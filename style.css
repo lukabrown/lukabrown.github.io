@@ -171,6 +171,10 @@ textarea {
   border-radius: 0.5rem;
   border: none;
   text-align: center;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-fallback {
