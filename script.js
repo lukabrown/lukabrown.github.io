@@ -194,10 +194,15 @@ function renderGames(games) {
       img.alt = game.name;
       img.loading = "lazy";
 
-      //const title = document.createElement("h2");
-      //title.textContent = game.name;
+      img.onerror = () => {
+        img.remove();
 
-      //card.appendChild(title);
+        const title = document.createElement("h2");
+        title.textContent = game.name;
+        title.className = "game-fallback";
+
+        card.appendChild(title);
+      };
       card.appendChild(img);
       container.appendChild(card);
     });
