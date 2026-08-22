@@ -189,6 +189,11 @@ function renderGames(games) {
       const card = document.createElement("div");
       card.className = "game-card";
 
+      const link = document.createElement("a");
+      link.href = game.storeUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+
       const img = document.createElement("img");
       img.src = game.url;
       img.alt = game.name;
@@ -203,7 +208,9 @@ function renderGames(games) {
 
         card.appendChild(title);
       };
-      card.appendChild(img);
+
+      link.appendChild(img);
+      card.appendChild(link);
       container.appendChild(card);
     });
   });
