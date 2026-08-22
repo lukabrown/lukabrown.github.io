@@ -220,6 +220,7 @@ textarea {
 
 .social-links a:hover {
   filter: brightness(0.8);
+  transform: scale(1.02);
 }
 
 .social-links img {
